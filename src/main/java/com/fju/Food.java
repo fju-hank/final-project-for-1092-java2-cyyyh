@@ -10,6 +10,7 @@ public class Food {
         this.name = name;
         this.price = price;
     }
+
     public void print(){
         System.out.println(id + "\t" + name + "\t" + price);
     }
