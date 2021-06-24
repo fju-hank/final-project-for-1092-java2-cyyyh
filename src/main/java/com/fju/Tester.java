@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
-
+        System.out.println("Welcome!" + "\n" + "Menu:");
         Food food1 = new Food("a", "cake", 75);
         Food food2 = new Food("b", "bread", 55);
         Food food3 = new Food("c", "cookies", 45);
@@ -26,9 +26,8 @@ public class Tester {
         int d = 40;
         int e = 40;
 
-        System.out.println("Welcome!");
         while(true){
-            System.out.println("Price: " + price + ", Please order, if finished, please enter 'f' ");
+            System.out.println("Please order, if finished, please enter 'f' , Price: " + price);
             String s = scanner.next();
             if (s.equals("a")){
                 price = price + a;
@@ -39,12 +38,12 @@ public class Tester {
             }else if(s.equals("d")){
                 price = price + d;
             }else if(s.equals("e")){
-                price = price + c;
+                price = price + e;
             }else if(s.equals("f")){
                 total = price;
                 System.out.println("_____________________________________________________");
                 System.out.println("Total: " + total + ", thank you!!!");
-                if (total > 200){
+                if (total >= 200){
                     System.out.println("You can join a lucky draw!!!!!");
                 } else {
                     break;
