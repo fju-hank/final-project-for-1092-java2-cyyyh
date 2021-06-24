@@ -32,7 +32,11 @@ public class Tester {
                 total = price;
                 System.out.println("_____________________________________________________");
                 System.out.println("Total: " + total + ", thank you!!!");
-
+                if (total > 200){
+                    System.out.println("You can join a lucky draw!!!!!");
+                } else {
+                    break;
+                }
                 break;
             }
         }
