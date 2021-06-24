@@ -6,4 +6,7 @@ public class Drink extends Food{
         super(id, name, price);
         this.ice = ice;
     }
+    public void print(){
+        System.out.println(id + "\t" + name + "\t" + price + "\t" +  ice);
+    }
 }
