@@ -1,3 +1,5 @@
+com/fju/Drink.java
+ com.fju.Drink
 com/fju/Food.java
  com.fju.Food
 com/fju/Tester.java
