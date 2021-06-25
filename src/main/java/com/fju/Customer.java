@@ -2,7 +2,7 @@ package com.fju;
 
 import java.util.ArrayList;
 
-public class Customer {
+public class Customer extends Thread{
     int time = 90;  //用餐時間90分鐘
     int people;
 
@@ -10,10 +10,10 @@ public class Customer {
     public Customer(int p){
         this.people = p;
         this.menu = new ArrayList<Food>();
+        this.runTime();
     }
     public void addFood(Food f){
         this.menu.add(f);
-    //    System.out.println(f.toString());
     }
     public int getTotal(){
         int temp = 0;
@@ -31,4 +31,22 @@ public class Customer {
         return s;
     }
 
+    public void runTime(){
+        if(this.time>0){
+            this.start();
+        }
+    }
+
+    public void hasTime(){
+        if(this.time <= 0 ){
+        }
+    }
+
+    @Override
+    public void run() {
+        while (this.time > 0) {
+            this.time = this.time - 1;
+             System.out.println("還剩" + this.time + "分鐘");
+        }
+    }
 }

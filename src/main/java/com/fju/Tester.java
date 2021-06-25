@@ -4,6 +4,16 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
+        System.out.println("Welcome!");
+        System.out.println("========= Menu =========");
+        System.out.println(new Cake().toString());
+        System.out.println(new Bread().toString());
+        System.out.println(new Cookies().toString());
+        System.out.println(new Drink(true).toString());
+        System.out.println(new Drink(false).toString());
+        System.out.println("========================");
+
+        /*
         System.out.println("Welcome!" + "\n" + "Menu:");
         Food food1 = new Food("a", "cake", 75);
         Food food2 = new Food("b", "bread", 55);
@@ -58,6 +68,6 @@ public class Tester {
                 break;
             }
         }
-
+*/
     }
 }

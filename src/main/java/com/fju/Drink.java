@@ -2,8 +2,8 @@ package com.fju;
 
 public class Drink extends Food{
     boolean ice;
-    public Drink(String id, String name, int price, boolean ice){
-        super(id, name, price);
+    public Drink(boolean ice){
+        super("d","coffee", 40);
         this.ice = ice;
     }
     public void print(){
