@@ -41,10 +41,15 @@ public class Tester {
                 price = price + e;
             }else if(s.equals("f")){
                 total = price;
-                System.out.println("_____________________________________________________");
+                System.out.println("________________________________________________________");
                 System.out.println("Total: " + total + ", thank you!!!");
                 if (total >= 200){
                     System.out.println("You can join a lucky draw!!!!!");
+                    System.out.println("________________________________________________________");
+                    Coupon c1 = new Coupon();
+                    Coupon c2 = new Coupon();
+                    c1.start();
+                    c2.start();
                 } else {
                     break;
                 }
