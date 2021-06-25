@@ -2,6 +2,7 @@ package com.fju;
 
 public class Cookies extends Food{
     public Cookies(){
-        super("b","Cookies",55);
+
+        super("c","Cookies",55);
     }
 }
