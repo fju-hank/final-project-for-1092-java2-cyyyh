@@ -15,5 +15,12 @@ public class Customer {
         this.menu.add(f);
         System.out.println(f.toString());
     }
+    public int getTotal(){
+        int temp = 0;
+        for (int i = 0; i < this.menu.size(); i++) {
+            temp = temp + this.menu.get(i).price;
+        }
+        return temp;
+    }
 
 }
