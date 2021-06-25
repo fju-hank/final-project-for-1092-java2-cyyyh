@@ -14,6 +14,9 @@ public  class Food {
     public void print(){
         System.out.println(id + "\t" + name + "\t" + price);
     }
+    public int getPrice(){
+        return this.price;
+    }
 
     @Override
     public String toString(){

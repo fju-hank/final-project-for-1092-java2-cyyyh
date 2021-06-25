@@ -18,7 +18,7 @@ public class Customer {
     public int getTotal(){
         int temp = 0;
         for (int i = 0; i < this.menu.size(); i++) {
-            temp = temp + this.menu.get(i).price;
+            temp = temp + this.menu.get(i).getPrice();
         }
         return temp;
     }
