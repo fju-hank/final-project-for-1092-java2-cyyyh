@@ -48,6 +48,8 @@ public class Tester {
                     System.out.println("________________________________________________________");
                     Coupon c1 = new Coupon();
                     Coupon c2 = new Coupon();
+                    c1.setName("Food Coupon");
+                    c2.setName("Drink Coupon");
                     c1.start();
                     c2.start();
                 } else {
