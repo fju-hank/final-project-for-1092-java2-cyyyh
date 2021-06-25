@@ -13,7 +13,7 @@ public class Customer {
     }
     public void addFood(Food f){
         this.menu.add(f);
-        System.out.println(f.toString());
+    //    System.out.println(f.toString());
     }
     public int getTotal(){
         int temp = 0;
