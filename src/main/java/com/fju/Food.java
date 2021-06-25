@@ -1,6 +1,6 @@
 package com.fju;
 
-public class Food {
+public  class Food {
     String id;
     String name;
     int price;
@@ -13,5 +13,10 @@ public class Food {
 
     public void print(){
         System.out.println(id + "\t" + name + "\t" + price);
+    }
+
+    @Override
+    public String toString(){
+        return id + "\t" + name + "\t" + price;
     }
 }

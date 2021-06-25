@@ -11,5 +11,9 @@ public class Customer {
         this.people = p;
         this.menu = new ArrayList<Food>();
     }
+    public void addFood(Food f){
+        this.menu.add(f);
+        System.out.println(f.toString());
+    }
 
 }
