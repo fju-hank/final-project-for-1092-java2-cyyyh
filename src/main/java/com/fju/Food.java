@@ -19,7 +19,7 @@ public  class Food {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return id + "\t" + name + "\t" + price;
     }
 }

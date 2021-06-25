@@ -8,8 +8,8 @@ public class Tester {
         Food food1 = new Food("a", "cake", 75);
         Food food2 = new Food("b", "bread", 55);
         Food food3 = new Food("c", "cookies", 45);
-        Drink drink1 = new Drink("d", "coffee", 40, "ice");
-        Drink drink2 = new Drink("e", "coffee", 40, "hot");
+        Drink drink1 = new Drink("d", "coffee", 40, true);
+        Drink drink2 = new Drink("e", "coffee", 40, false);
 
         food1.print();
         food2.print();
