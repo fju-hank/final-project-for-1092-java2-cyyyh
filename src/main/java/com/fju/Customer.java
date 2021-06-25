@@ -22,5 +22,13 @@ public class Customer {
         }
         return temp;
     }
+    public String getMenu(){
+        String s = "";
+        for (int i = 0; i < this.menu.size(); i++) {
+            s = s + this.menu.get(i).toString() + "\n";
+
+        }
+        return s;
+    }
 
 }
