@@ -1,6 +1,7 @@
 package com.fju;
 
 import java.util.Scanner;
+import javax.swing.*;
 
 public class Tester {
     public static void main(String[] args) {
@@ -25,23 +26,25 @@ public class Tester {
                 System.out.println("請問要點什麼？ 請輸入餐點代碼（a, b, c, d......)");
                 String menu = scan.next();
                 c1.addFood(menu);
-                System.out.println("請問還要加點嗎？ 請輸入y或n");
+                System.out.println("請問還要繼續點餐嗎？ 請輸入y或n");
                 String isOrder = scan.next();
                 if(!isOrder.equals("y")){
                     break;
                 }
             }
-            c1.start();
-            /*
-             * sleep   是為了等時間到再印出點餐明細
-             */
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             System.out.println("Ordered:\n"+ c1.getMenu());
-            System.out.println("Total: " + c1.getTotal());
+            c1.start();
+
+            JTextArea l1 = new JTextArea(c1.getMenu() +
+                    "\n=========================\nTotal:\t\t" +
+                    c1.getTotal() + "\n\n謝謝惠顧！！！"
+            );
+
+            JFrame jf = new JFrame("用餐明細");
+            jf.setBounds(500, 50, 275, 600);
+            jf.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+            jf.add(l1);
+            jf.setVisible(true);
             System.out.println("謝謝惠顧！！！");
             System.out.println("還有下一組客人嗎？  請輸入y/n");
             String yn = scan.next();

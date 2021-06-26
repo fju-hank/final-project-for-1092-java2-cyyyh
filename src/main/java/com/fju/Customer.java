@@ -72,7 +72,7 @@ public class Customer extends Thread{
             }
         }
         if(this.time<=0){
-            System.out.println("第" +this.num+ "組時間到");
+            System.out.println("第" +this.num+ "組時間到");  //用餐時間到了
         }
     }
 }
