@@ -20,7 +20,7 @@ public class Tester {
         Scanner scan = new Scanner(System.in);
         boolean bln = true; // 有無人
         do {
-            System.out.println("您好，請問幾位？ 請輸入數字（1, 2, 3, 4...");
+            System.out.println("您好，請問幾位？ 請輸入數字（1, 2, 3, 4...)");
             int p = scan.nextInt();
             Customer c1 = new Customer(p, ++number);
             while (true){
