@@ -12,10 +12,7 @@ public class Customer extends Thread{
         this.num = n;
         this.people = p;
         this.menu = new ArrayList<Food>();
-        //this.runTime();
     }
-    //public void addFood(Food f){
-        //this.menu.add(f);
     public void addFood(String id){
         if (id.equals("a")  || id.equals("A")){
             this.menu.add(new Cake());
@@ -52,17 +49,6 @@ public class Customer extends Thread{
         return s;
     }
 
-    public void runTime(){
-        if(this.time>0){
-            this.start();
-        }
-    }
-
-    public void hasTime(){
-        if(this.time <= 0 ){
-        }
-    }
-
     @Override
     public void run() {
         while (this.time > 0) {
@@ -73,6 +59,7 @@ public class Customer extends Thread{
         }
         if(this.time<=0){
             System.out.println("第" +this.num+ "組時間到");  //用餐時間到了
+            System.out.println("========================" + "\n");
         }
     }
 }
