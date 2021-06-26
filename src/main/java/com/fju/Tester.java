@@ -53,9 +53,9 @@ public class Tester {
             jf.setVisible(true);
 
             //下一組客人點餐
-            System.out.println("下一組客人嗎？  請輸入y/n");
-            String yn = scan.next();
-            if(!yn.equals("y")){
+            System.out.println("下一組客人嗎？  請輸入y");
+            String y = scan.next();
+            if(!y.equals("y")){
                 bln = false;
             }else {
                 bln = true;
