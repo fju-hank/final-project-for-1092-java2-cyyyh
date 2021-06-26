@@ -5,23 +5,25 @@ import java.util.ArrayList;
 public class Customer extends Thread{
     int time = 90;  //用餐時間90分鐘
     int people;
-
+    int num;  //組別編號
     ArrayList<Food> menu;
-    public Customer(int p){
+
+    public Customer(int p, int n){
+        this.num = n;
         this.people = p;
         this.menu = new ArrayList<Food>();
-        this.runTime();
+        //this.runTime();
     }
     //public void addFood(Food f){
         //this.menu.add(f);
     public void addFood(String id){
-        if (id.equals("a")){
+        if (id.equals("a")  || id.equals("A")){
             this.menu.add(new Cake());
-        } else if (id.equals("b")){
+        } else if (id.equals("b") || id.equals("B")){
             this.menu.add(new Bread());
-        } else if (id.equals("c")){
+        } else if (id.equals("c") || id.equals("C")){
             this.menu.add(new Cookies());
-        } else if (id.equals("d")){
+        } else if (id.equals("d") || id.equals("D")){
             java.util.Scanner sin = new java.util.Scanner(System.in);
             System.out.println("請問要冰咖啡或熱咖啡？  輸入 I or H");
             String isIh = sin.next();
@@ -30,6 +32,8 @@ public class Customer extends Thread{
             }else{
                 this.menu.add(new Drink(false));
             }
+        } else{
+            System.out.println("無此餐點");
         }
     }
     public int getTotal(){
@@ -63,7 +67,12 @@ public class Customer extends Thread{
     public void run() {
         while (this.time > 0) {
             this.time = this.time - 1;
-             System.out.println("還剩" + this.time + "分鐘");
+            if (this.time == 30) {  //還剩下30分鐘，會跳出提醒
+                System.out.println("第" + this.num + "組還剩" + this.time + "分鐘");
+            }
+        }
+        if(this.time<=0){
+            System.out.println("第" +this.num+ "組時間到");
         }
     }
 }
