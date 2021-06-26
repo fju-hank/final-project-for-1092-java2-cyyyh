@@ -12,8 +12,25 @@ public class Customer extends Thread{
         this.menu = new ArrayList<Food>();
         this.runTime();
     }
-    public void addFood(Food f){
-        this.menu.add(f);
+    //public void addFood(Food f){
+        //this.menu.add(f);
+    public void addFood(String id){
+        if (id.equals("a")){
+            this.menu.add(new Cake());
+        } else if (id.equals("b")){
+            this.menu.add(new Bread());
+        } else if (id.equals("c")){
+            this.menu.add(new Cookies());
+        } else if (id.equals("d")){
+            java.util.Scanner sin = new java.util.Scanner(System.in);
+            System.out.println("請問要冰咖啡或熱咖啡？  輸入 I or H");
+            String isIh = sin.next();
+            if(!isIh.equals("H") || !isIh.equals("h")) {  //沒有選擇熱咖啡，就算沒選，也給冰咖啡
+                this.menu.add(new Drink(true));
+            }else{
+                this.menu.add(new Drink(false));
+            }
+        }
     }
     public int getTotal(){
         int temp = 0;
