@@ -24,10 +24,10 @@ public class Customer extends Thread{
             java.util.Scanner sin = new java.util.Scanner(System.in);
             System.out.println("請問要冰咖啡或熱咖啡？  輸入 I or H");
             String isIh = sin.next();
-            if(!isIh.equals("H") || !isIh.equals("h")) {  //沒有選擇熱咖啡，就算沒選，也給冰咖啡
-                this.menu.add(new Drink(true));
-            }else{
+            if(isIh.equals("H") || isIh.equals("h")) {
                 this.menu.add(new Drink(false));
+            }else{
+                this.menu.add(new Drink(true));  //選擇熱咖啡以外的，也給冰咖啡
             }
         } else{
             System.out.println("無此餐點");
